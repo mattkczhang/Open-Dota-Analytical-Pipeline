@@ -35,9 +35,13 @@ def read_json(collection, path = DATA_PATH, N = None):
         print('sampling topk data')
         counter = 0
         while counter < N:
-            line = fh.readline()
-            # lmao the naming of this
-            counter = load_json_line(collection, line, counter=counter)   
+            try:
+                line = fh.readline()
+                # lmao the naming of this
+                counter = load_json_line(collection, line, counter=counter) 
+            except:
+                print(f'trouble reading line: {line}')
+  
     else:
         print('loading entire data into db')
         for line in fh:
@@ -49,16 +53,18 @@ def read_json(collection, path = DATA_PATH, N = None):
 # line: a string object from file handler representing a line in file
 def load_json_line(collection, line, counter=None):
     # if the line is not one of the poorly formatted delimiter
-    if line != ',\n' and line != '[\n' and line != '\n]':
+    try:
         parsed_dict = json.loads(line) 
+    except JSONDecodeError:
+        print(f'invalid json string: {line}')
         # if we are only doing top-k sampling
-        if counter is not None:
-            # update counter
-            counter += 1
-        try:
-            collection.insert_one(parsed_dict)
-        except DuplicateKeyError:
-            print(f"duplicate entry with match_id: {parsed_dict['match_id']}")
+    if counter is not None:
+        # update counter
+        counter += 1
+    try:
+        collection.insert_one(parsed_dict)
+    except DuplicateKeyError:
+        print(f"duplicate entry with match_id: {parsed_dict['match_id']}")
     #else do nothing
     return counter
         

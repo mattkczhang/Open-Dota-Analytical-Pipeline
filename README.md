@@ -22,8 +22,9 @@
 
 ### Building the project stages using `run_notebook.ipynb`
 - Since this is an notebook serving as a run script, simply run the cell accordingly for the corresponding functionality
- - build_db() is for creating the OLTP instance from scratch and loading the data locally
- - For transformation:
-  - subset_match_stat() is for getting match-level statistics
-  - subset_chat() is for getting chat messages for every match
-  - record_hero_performance() is for getting hero level statistics for every match
+- For Loading: 
+	- build_db() is for creating the OLTP instance from scratch and loading the data locally
+- For transformation:
+	- subset_match_stat() is for getting match-level statistics
+	- subset_chat() is for getting chat messages for every match
+	- record_hero_performance() is for getting hero level statistics for every match

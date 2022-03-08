@@ -13,8 +13,6 @@
 - `run.ipynb` is a notebook served as an informal run-script for the project's code base
 - `requirements.txt` lists the Python package dependencies of which the code relies on. 
 
-
-
 ## How to Run
 
 - Install the dependencies by running `pip install -r requirements.txt` from the root directory of the project.
@@ -28,3 +26,10 @@
 	- subset_match_stat() is for getting match-level statistics
 	- subset_chat() is for getting chat messages for every match
 	- record_hero_performance() is for getting hero level statistics for every match
+
+## Authors
+
+Shutong Li: University of Chicago MScA student
+Kaichong (Matt) Zhang: University of Chicago MScA student
+Flora Huang: University of Chicago MScA student
+Elsa Liuu: University of Chicago MScA student

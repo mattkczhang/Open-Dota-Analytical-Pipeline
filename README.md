@@ -30,6 +30,9 @@
 ## Authors
 
 Shutong Li: University of Chicago MScA student
+
 Kaichong (Matt) Zhang: University of Chicago MScA student
+
 Flora Huang: University of Chicago MScA student
+
 Elsa Liuu: University of Chicago MScA student

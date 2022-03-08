@@ -12,6 +12,9 @@
 - `EDA.ipynb` is a notebook containing EDA works for the dataset prior to their loading onto the local OLTP (MongoDB) instance.
 - `run.ipynb` is a notebook served as an informal run-script for the project's code base
 - `requirements.txt` lists the Python package dependencies of which the code relies on. 
+- `Sentimental_Analysis` contains the R Studio files for game chats sentimental analysis.
+- `Book1.twb` and `Book1.twbx` are parts of the tableau files for visualization. 
+- `DEPA FINAL - 2021-12-11.pdf` is the final presentation slide.
 
 ## How to Run
 
